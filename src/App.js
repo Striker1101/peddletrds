@@ -4,11 +4,14 @@ import Footer from "./Components/Footer";
 import RoutesPaths from "./RoutesPaths.jsx";
 import { Store } from "./Context/Store.js";
 import useDashboardCheck from "./Components/useDashboardCheck.jsx";
+import { ToastProvider } from "./Components/ToastProvider.jsx";
+
 function App() {
   const isDashboard = useDashboardCheck();
 
   return (
     <div className="App">
+      <ToastProvider />
       {isDashboard ? "dashboard" : <Navigation />}
       <main>
         <Store>

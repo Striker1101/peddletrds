@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import BreadCrumbAuth from "../../Components/BreadCrumbAuth";
 import { apiPost } from "../../Utils/service";
-import { handleSuccess } from "../../Components/ToastProvider";
+import { handleError, handleSuccess } from "../../Components/ToastProvider";
 
-export default function ForgetPassword() {
+export default function ForgetPasswordConfirm() {
   const [formData, setFormData] = useState({
-    email: "",
+    password: "",
+    confirm_password: "",
   });
   const [loading, setLoading] = useState(false);
 
@@ -20,16 +21,22 @@ export default function ForgetPassword() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (formData.password !== formData.confirm_password) {
+      handleError({ message: "Password do not match" });
+    }
     setLoading(true);
 
-    apiPost("/auth/password/email", formData)
+    apiPost("/auth/password/reset", formData)
       .then((response) => {
         setLoading(false);
 
-        if (response.status === 200) {
+        if (response.status === 201) {
           handleSuccess(response.data.message);
+          setTimeout(() => {
+            window.location.href = "/login";
+          }, 1000); // Redirect on success
         }
-        console.log("response", response);
+        console.log("User created:", response);
       })
       .catch((err) => {
         setLoading(false);
@@ -72,11 +79,21 @@ export default function ForgetPassword() {
                     <div class="col-lg-12 col-md-12">
                       <div class="form_box">
                         <input
-                          defaultValue={formData.email}
+                          type="password"
+                          defaultValue={formData.password}
                           onChange={handleChange}
-                          type="email"
-                          name="email"
-                          placeholder="E-mail"
+                          name="password"
+                          required
+                          placeholder="Password"
+                        />
+
+                        <input
+                          type="password"
+                          defaultValue={formData.password}
+                          onChange={handleChange}
+                          name="password"
+                          required
+                          placeholder="Password"
                         />
                       </div>
                     </div>
@@ -90,7 +107,7 @@ export default function ForgetPassword() {
                           }}
                           type="submit"
                         >
-                          Send Reset Mail
+                          Reset Password
                         </button>
                       </div>
                     </div>

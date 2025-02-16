@@ -1,19 +1,24 @@
 import React, { useState } from "react";
 import BreadCrumbAuth from "../../Components/BreadCrumbAuth";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { apiPost } from "../../Utils/service";
+import { handleSuccess } from "../../Components/ToastProvider";
 
 export default function Register() {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const uplink = queryParams.get("uplink");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
-    cpassword: "",
+    password_save: "",
     phone: "",
     country: "",
-    upline: "",
-    terms: "",
-    subscribe: false, // Checkbox field
+    uplink: uplink,
+    terms: false,
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -24,7 +29,27 @@ export default function Register() {
     }));
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    apiPost("/auth/register", formData)
+      .then((response) => {
+        setLoading(false);
+
+        if (response.status === 201) {
+          handleSuccess(response.data.message);
+          setTimeout(() => {
+            window.location.href = "/login";
+          }, 1000); // Redirect on success
+        }
+        console.log("User created:", response);
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.error(err);
+      });
+  };
 
   return (
     <div>
@@ -63,10 +88,10 @@ export default function Register() {
                         <input
                           type="text"
                           name="name"
+                          value={formData.name}
                           onChange={handleChange}
                           required
                           placeholder="Enter FullName"
-                          value=""
                         />
                       </div>
                     </div>
@@ -78,7 +103,7 @@ export default function Register() {
                           onChange={handleChange}
                           required
                           placeholder="E-mail"
-                          value=""
+                          value={formData.email}
                         />
                       </div>
                     </div>
@@ -89,8 +114,8 @@ export default function Register() {
                           name="password"
                           required
                           onChange={handleChange}
+                          value={formData.password}
                           placeholder="Password"
-                          value=""
                         />
                       </div>
                     </div>
@@ -99,10 +124,10 @@ export default function Register() {
                         <input
                           type="password"
                           onChange={handleChange}
-                          name="cpassword"
+                          name="password_save"
+                          value={formData.password_save}
                           required
                           placeholder="Confirm Password"
-                          value=""
                         />
                       </div>
                     </div>
@@ -111,10 +136,10 @@ export default function Register() {
                         <input
                           placeholder="Phone Number"
                           type="text"
+                          value={formData.phone}
                           onChange={handleChange}
                           required
                           name="phone"
-                          value=""
                         />
                       </div>
                     </div>
@@ -122,6 +147,7 @@ export default function Register() {
                       <div class="form_box">
                         <select
                           onChange={handleChange}
+                          value={formData.country}
                           style={{
                             borderRadius: "5px",
                             backgroundColor: "#fff",
@@ -476,11 +502,10 @@ export default function Register() {
                       <div class="form_box">
                         <input
                           type="text"
-                          name="upline"
+                          name="uplink"
+                          value={formData.uplink}
                           onChange={handleChange}
-                          placeholder="upline:  "
-                          readonly=""
-                          value=""
+                          placeholder="uplink:  "
                         />
                       </div>
                     </div>
@@ -490,13 +515,21 @@ export default function Register() {
                         type="checkbox"
                         onChange={handleChange}
                         name="terms"
-                        value=""
+                        value={formData.terms}
                       />
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                       <div class="form-button">
-                        <button type="submit">Sign Up</button>
+                        <button
+                          disabled={loading}
+                          style={{
+                            backgroundColor: loading ? "black" : "purple",
+                          }}
+                          type="submit"
+                        >
+                          Sign Up
+                        </button>
                       </div>
                     </div>
                   </div>

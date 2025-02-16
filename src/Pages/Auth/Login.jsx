@@ -1,8 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BreadCrumbAuth from "../../Components/BreadCrumbAuth";
+import { apiPost } from "../../Utils/service";
+import { handleSuccess } from "../../Components/ToastProvider";
 
 export default function Login() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    apiPost("/auth/login", formData)
+      .then((response) => {
+        setLoading(false);
+
+        if (response.status === 200) {
+          handleSuccess(response.data.message);
+          localStorage.setItem(
+            "token",
+            response.data?.access_token?.original?.access_token
+          );
+          localStorage.setItem("user", response.data.user);
+
+          setTimeout(() => {
+            window.location.href = "/dashboard";
+          }, 1000); // Redirect on success
+        }
+        console.log("User created:", response);
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.error(err);
+      });
+  };
   return (
     <div>
       {/* Start breadcumb-area */}
@@ -31,7 +75,7 @@ export default function Login() {
                 </div>
 
                 <form
-                  action="php/signin.php"
+                  onSubmit={handleSubmit}
                   method="post"
                   style={{ marginTop: "2rem" }}
                 >
@@ -41,6 +85,8 @@ export default function Login() {
                         <input
                           type="email"
                           name="email"
+                          defaultValue={formData.email}
+                          onChange={handleChange}
                           required
                           placeholder="E-mail"
                         />
@@ -50,6 +96,8 @@ export default function Login() {
                       <div class="form_box">
                         <input
                           type="password"
+                          defaultValue={formData.password}
+                          onChange={handleChange}
                           name="password"
                           required
                           placeholder="Password"
@@ -59,7 +107,15 @@ export default function Login() {
 
                     <div class="col-lg-12 col-md-12">
                       <div class="form-button">
-                        <button type="submit">Login</button>
+                        <button
+                          disabled={loading}
+                          style={{
+                            backgroundColor: loading ? "black" : "purple",
+                          }}
+                          type="submit"
+                        >
+                          Login
+                        </button>
                       </div>
                     </div>
                   </div>
