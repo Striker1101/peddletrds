@@ -92,7 +92,7 @@ div#sticky-header:hover .sub-menu {
 <!-- Start  breadcumb-area   Css -->
 <!-- ============================================================== -->*/
 .breadcumb-area {
-  background: url(../images/inner-bg.jpg);
+  background: url(../../public/assets/images/inner-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -160,7 +160,7 @@ div#sticky-header:hover .sub-menu {
   padding: 0 0 12px;
 }
 .breadcumb-area.style-nine {
-  background: url(../images/service-bg.jpg);
+  background: url(../../public/assets/images/service-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -172,7 +172,7 @@ div#sticky-header:hover .sub-menu {
 <!-- Start  slider-area   Css -->
 <!-- ============================================================== -->*/
 .breadcumb-area.style-two {
-  background: url(../images/contact-bg.jpg);
+  background: url(../../public/assets/images/contact-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -236,7 +236,7 @@ div#sticky-header:hover .sub-menu {
   left: 108px;
   height: 100%;
   width: 100%;
-  background: url(../images/about-1.png);
+  background: url(../../public/assets/images/about-1.png);
   background-repeat: no-repeat;
 }
 .contact-area .sections-title .sub-title h3::after {
@@ -246,7 +246,7 @@ div#sticky-header:hover .sub-menu {
   left: -79px;
   height: 100%;
   width: 100%;
-  background: url(../images/feature-shap.png);
+  background: url(../../public/assets/images/feature-shap.png);
   background-repeat: no-repeat;
 }
 .contact-area .contact-thumb img {
@@ -331,7 +331,7 @@ div#sticky-header:hover .sub-menu {
   left: -90px;
   height: 100%;
   width: 100%;
-  background: url(../images/btn-shape.png);
+  background: url(../../public/assets/images/btn-shape.png);
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0;
@@ -515,7 +515,7 @@ h1.bottoms {
 <!-- Start  slider-area   Css -->
 <!-- ============================================================== -->*/
 .slider-area {
-  background: url(../images/tranding.jpg);
+  background: url(../../public/assets/images/tranding.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -560,7 +560,7 @@ h1.bottoms {
   left: -90px;
   height: 100%;
   width: 100%;
-  background: url(../images/btn-shape.png);
+  background: url(../../public/assets/images/btn-shape.png);
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0;
@@ -601,7 +601,7 @@ h1.bottoms {
 }
 .row.top {
   padding: 80px 0 80px;
-  background: url(../images/tranding-5.png);
+  background: url(../../public/assets/images/tranding-5.png);
   background-repeat: no-repeat;
   border-radius: 10px;
 }
@@ -667,7 +667,7 @@ h1.bottoms {
   left: -90px;
   height: 100%;
   width: 100%;
-  background: url(../images/btn-shape.png);
+  background: url(../../public/assets/images/btn-shape.png);
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0;
@@ -700,7 +700,7 @@ h1.bottoms {
   left: 100px;
   height: 100%;
   width: 100%;
-  background: url(../images/about-1.png);
+  background: url(../../public/assets/images/about-1.png);
   background-repeat: no-repeat;
 }
 .about-area.style-one .about-tmb i {
@@ -722,7 +722,7 @@ h1.bottoms {
 .brand-area.upper {
   top: 0;
   padding: 85px 0 85px;
-  background: url(../images/tranding-5.png);
+  background: url(../../public/assets/images/tranding-5.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -880,7 +880,7 @@ h1.bottoms {
 <!-- ============================================================== -->*/
 .call-do-actions-area {
   padding: 100px 0 90px;
-  background: url(../images/About_1.png);
+  background: url(../../public/assets/images/About_1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -924,7 +924,7 @@ h1.bottoms {
   left: -90px;
   height: 100%;
   width: 100%;
-  background: url(../images/btn-shape.png);
+  background: url(../../public/assets/images/btn-shape.png);
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0;
@@ -953,7 +953,7 @@ h1.bottoms {
   left: 86px;
   height: 100%;
   width: 100%;
-  background: url(../images/about-1.png);
+  background: url(../../public/assets/images/about-1.png);
   background-repeat: no-repeat;
 }
 .pricing-area .sub-title h3::after {
@@ -965,7 +965,7 @@ h1.bottoms {
   margin: 0 auto 0;
   height: 100%;
   width: 100%;
-  background: url(../images/feature-shap.png);
+  background: url(../../public/assets/images/feature-shap.png);
   background-repeat: no-repeat;
 }
 .pricing-area .section-text p {
@@ -1178,7 +1178,7 @@ li.price-icon-text {
   margin: 0 auto 0;
   height: 100%;
   width: 100%;
-  background: url(../images/feature-shap.png);
+  background: url(../../public/assets/images/feature-shap.png);
   background-repeat: no-repeat;
 }
 .benefit-area .sections-title .sub-title h3::before {
@@ -1188,7 +1188,7 @@ li.price-icon-text {
   left: 88px;
   height: 100%;
   width: 100%;
-  background: url(../images/about-1.png);
+  background: url(../../public/assets/images/about-1.png);
   background-repeat: no-repeat;
 }
 .dreamit-benefit-single-box {
@@ -1313,7 +1313,7 @@ span.fill {
 .counter-area {
   position: relative;
   padding: 90px 0 90px;
-  background: url(../images/About_1.png);
+  background: url(../../public/assets/images/About_1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1365,7 +1365,7 @@ span.fill {
   left: 62px;
   height: 100%;
   width: 100%;
-  background: url(../images/about-1.png);
+  background: url(../../public/assets/images/about-1.png);
   background-repeat: no-repeat;
 }
 .blog-area .sub-title h3::after {
@@ -1375,7 +1375,7 @@ span.fill {
   content: "";
   height: 100%;
   width: 100%;
-  background: url(../images/feature-shap.png);
+  background: url(../../public/assets/images/feature-shap.png);
   background-repeat: no-repeat;
 }
 .blog-single-box {
@@ -1839,7 +1839,7 @@ span.fill {
   left: -90px;
   height: 100%;
   width: 100%;
-  background: url(../images/btn-shape.png);
+  background: url(../../public/assets/images/btn-shape.png);
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0;
@@ -1871,7 +1871,7 @@ span.fill {
   left: 71px;
   height: 100%;
   width: 100%;
-  background: url(../images/about-1.png);
+  background: url(../../public/assets/images/about-1.png);
   background-repeat: no-repeat;
 }
 .main-title h1 {
@@ -1915,7 +1915,7 @@ h1.bottom {
   left: 87px;
   height: 100%;
   width: 100%;
-  background: url(../images/about-1.png);
+  background: url(../../public/assets/images/about-1.png);
   background-repeat: no-repeat;
 }
 .row.data-box-inner {
@@ -1980,7 +1980,7 @@ span.more {
 <!-- ============================================================== -->*/
 .feature-area {
   padding: 100px 0 115px;
-  background: url(../images/tranding-6.jpg);
+  background: url(../../public/assets/images/tranding-6.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1998,7 +1998,7 @@ span.more {
   margin: 0 auto 0;
   height: 100%;
   width: 100%;
-  background: url(../images/about-1.png);
+  background: url(../../public/assets/images/about-1.png);
   background-repeat: no-repeat;
 }
 .feature-area .sections-title .sub-title h3::after {
@@ -2010,7 +2010,7 @@ span.more {
   margin: 0 auto 0;
   height: 100%;
   width: 100%;
-  background: url(../images/feature-shap.png);
+  background: url(../../public/assets/images/feature-shap.png);
   background-repeat: no-repeat;
 }
 .single-feature-box {
@@ -2028,7 +2028,7 @@ span.more {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(../images/service.png);
+  background: url(../../public/assets/images/service.png);
   z-index: -1;
   opacity: 0;
   transition: 0.5s;
@@ -2076,7 +2076,7 @@ span.more {
 <!-- Start  testimonial-area   Css -->
 <!-- ============================================================== -->*/
 .testimonial-area {
-  background: url(../images/tranding.jpg);
+  background: url(../../public/assets/images/tranding.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2094,7 +2094,7 @@ span.more {
   margin: 0 auto 0;
   height: 100%;
   width: 100%;
-  background: url(../images/about-1.png);
+  background: url(../../public/assets/images/about-1.png);
   background-repeat: no-repeat;
 }
 .testimonial-area .sections-title .sub-title h3::after {
@@ -2106,7 +2106,7 @@ span.more {
   margin: 0 auto 0;
   height: 100%;
   width: 100%;
-  background: url(../images/feature-shap.png);
+  background: url(../../public/assets/images/feature-shap.png);
   background-repeat: no-repeat;
 }
 .single-testimonial-box {
@@ -2124,7 +2124,7 @@ span.more {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(../images/tranding-2.png);
+  background: url(../../public/assets/images/tranding-2.png);
   opacity: 0;
   z-index: -1;
   transition: 0.5s;
@@ -2178,7 +2178,7 @@ span.more {
 <!-- ============================================================== -->*/
 .call-do-action-area {
   padding: 100px 0 90px;
-  background: url(../images/call-do.png);
+  background: url(../../public/assets/images/call-do.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2222,7 +2222,7 @@ span.more {
   left: -90px;
   height: 100%;
   width: 100%;
-  background: url(../images/btn-shape.png);
+  background: url(../../public/assets/images/btn-shape.png);
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0;
@@ -3213,7 +3213,7 @@ ul.sub-menu li a:hover {
 /*particales js*/
 canvas {
   height: 855px;
-  background: url(../images/tranding.jpg);
+  background: url(../../public/assets/images/tranding.jpg);
 }
 
 div#particles {

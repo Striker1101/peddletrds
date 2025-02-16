@@ -19,8 +19,10 @@ export default function RoutesPaths() {
       <Route path="/about" element={<About />} />
       <Route path="/service" element={<Service />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/auth/*" element={<AuthRoutes />} />
-      <Route path="/dashboard/*" element={<DashboardRoutes />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/forget_password" element={<ForgetPassword />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/dashboard" element={<DashboardHome />} />
       <Route path="*" element={<NotFound />} /> {/* Catch-all 404 route */}
     </Routes>
   );
@@ -29,6 +31,7 @@ export default function RoutesPaths() {
 function DashboardRoutes() {
   return (
     <Routes>
+      <Route path="/dashboard/*" element={<DashboardRoutes />} />
       <Route path="/" element={<DashboardHome />} />
       <Route path="/withdraw" element={<Withdraw />} />
       <Route path="/deposit" element={<Deposit />} />
