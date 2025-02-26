@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import BreadCrumbAuth from "../../Components/BreadCrumbAuth";
 import { apiPost } from "../../Utils/service";
 import { handleError, handleSuccess } from "../../Components/ToastProvider";
+import { useLocation } from "react-router-dom";
 
 export default function ForgetPasswordConfirm() {
   const [formData, setFormData] = useState({
     password: "",
-    confirm_password: "",
+    password_confirmation: "",
   });
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+
+  const token = queryParams.get("token");
+  const email = queryParams.get("email");
+
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -21,22 +28,32 @@ export default function ForgetPasswordConfirm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.password !== formData.confirm_password) {
+    if (formData.password !== formData.password_confirmation) {
       handleError({ message: "Password do not match" });
     }
+
     setLoading(true);
 
-    apiPost("/auth/password/reset", formData)
+    const data = {
+      ...formData,
+      token,
+      email,
+    };
+
+    if (!token || !email) {
+      window.location.href = "/forget_password";
+    }
+
+    apiPost("/auth/password/reset", data)
       .then((response) => {
         setLoading(false);
 
-        if (response.status === 201) {
+        if (response.status === 200) {
           handleSuccess(response.data.message);
           setTimeout(() => {
             window.location.href = "/login";
           }, 1000); // Redirect on success
         }
-        console.log("User created:", response);
       })
       .catch((err) => {
         setLoading(false);
@@ -89,11 +106,12 @@ export default function ForgetPasswordConfirm() {
 
                         <input
                           type="password"
-                          defaultValue={formData.password}
+                          style={{ marginTop: "5px" }}
+                          defaultValue={formData.password_confirmation}
                           onChange={handleChange}
-                          name="password"
+                          name="password_confirmation"
                           required
-                          placeholder="Password"
+                          placeholder="Confirm Password"
                         />
                       </div>
                     </div>

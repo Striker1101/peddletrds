@@ -41,4 +41,5 @@ export const apiGet = (endpoint, params) =>
   apiRequest("get", endpoint, null, params);
 export const apiPost = (endpoint, data) => apiRequest("post", endpoint, data);
 export const apiPut = (endpoint, data) => apiRequest("put", endpoint, data);
+export const apiPatch = (endpoint, data) => apiRequest("patch", endpoint, data);
 export const apiDelete = (endpoint) => apiRequest("delete", endpoint);

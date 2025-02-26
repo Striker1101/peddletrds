@@ -34,11 +34,15 @@ export default function Login() {
             "token",
             response.data?.access_token?.original?.access_token
           );
-          localStorage.setItem("user", response.data.user);
+          localStorage.setItem("user", JSON.stringify(response.data.user));
 
-          setTimeout(() => {
-            window.location.href = "/dashboard";
-          }, 1000); // Redirect on success
+          if (response.data?.user?.is_token_verified) {
+            setTimeout(() => {
+              window.location.href = "/dashboard";
+            }, 1000); // Redirect on success
+          } else {
+            window.location.href = "/verify";
+          }
         }
         console.log("User created:", response);
       })

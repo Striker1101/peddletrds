@@ -12,13 +12,13 @@ function App() {
   return (
     <div className="App">
       <ToastProvider />
-      {isDashboard ? "dashboard" : <Navigation />}
+      {isDashboard ? "" : <Navigation />}
       <main>
         <Store>
           <RoutesPaths />
         </Store>
       </main>
-      {isDashboard ? "dashboard" : <Footer />}
+      {isDashboard ? "" : <Footer />}
     </div>
   );
 }
