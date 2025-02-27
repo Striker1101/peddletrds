@@ -12,7 +12,6 @@ export default function Withdraw() {
     });
   }, []);
 
-  console.log(type);
   return (
     <div style={{ marginTop: "5px" }}>
       <Link
@@ -22,9 +21,14 @@ export default function Withdraw() {
         {" "}
         Transaction{" "}
       </Link>
-      {type.map((item, i) => {
-        return <WithdrawType withdraw={item} key={i} />;
-      })}
+      <div
+        className=""
+        style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}
+      >
+        {type.map((item, i) => {
+          return <WithdrawType withdraw={item} key={i} />;
+        })}
+      </div>
     </div>
   );
 }

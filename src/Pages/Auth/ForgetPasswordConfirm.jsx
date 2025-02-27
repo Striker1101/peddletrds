@@ -65,22 +65,22 @@ export default function ForgetPasswordConfirm() {
       <BreadCrumbAuth name={"Forget Password"} />
       {/* Start footer-area */}
 
-      <div class="contact-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
-              <div class="single-contact-box">
-                <div class="contact-thumb">
+      <div className="contact-area">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-6">
+              <div className="single-contact-box">
+                <div className="contact-thumb">
                   <img src="assets/images/contact.png" alt="" />
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6">
-              <div class="singles-contacts-box">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <div class="sections-title">
-                      <div class="footer-logo">
+            <div className="col-lg-6 col-md-6">
+              <div className="singles-contacts-box">
+                <div className="row">
+                  <div className="col-lg-12">
+                    <div className="sections-title">
+                      <div className="footer-logo">
                         <img src="assets/images/logo.png" alt="" />
                       </div>
                     </div>
@@ -92,9 +92,9 @@ export default function ForgetPasswordConfirm() {
                   id=""
                   style={{ marginTop: "2rem" }}
                 >
-                  <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                      <div class="form_box">
+                  <div className="row">
+                    <div className="col-lg-12 col-md-12">
+                      <div className="form_box">
                         <input
                           type="password"
                           defaultValue={formData.password}
@@ -116,8 +116,8 @@ export default function ForgetPasswordConfirm() {
                       </div>
                     </div>
 
-                    <div class="col-lg-12 col-md-12">
-                      <div class="form-button">
+                    <div className="col-lg-12 col-md-12">
+                      <div className="form-button">
                         <button
                           disabled={loading}
                           style={{
@@ -131,7 +131,7 @@ export default function ForgetPasswordConfirm() {
                     </div>
                   </div>
                 </form>
-                <div class="footer-title" style={{ marginTop: "1rem" }}>
+                <div className="footer-title" style={{ marginTop: "1rem" }}>
                   Don't have an account?{" "}
                   <a href="signup.php">
                     <span>Sign up</span>

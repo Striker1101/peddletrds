@@ -6,15 +6,15 @@ export default function Contact() {
     <div>
       <BreadCrumb link_name={"Home"} page_name={"Contact Us"} />
       {/* Start info-area */}
-      <div class="info-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="single-info-box">
-                <div class="info-icon">
-                  <i class="fas fa-map-marker-alt"></i>
+      <div className="info-area">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-info-box">
+                <div className="info-icon">
+                  <i className="fas fa-map-marker-alt"></i>
                 </div>
-                <div class="info-area-title">
+                <div className="info-area-title">
                   <h3>Address Info</h3>
                   <p>
                     Artemis House, 12 Street, Grand Cayman, KY1-1156, Cayman
@@ -23,12 +23,12 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-info-box">
-                <div class="info-icon">
-                  <i class="fas fa-phone-alt"></i>
+            <div className="col-lg-4 col-md-6">
+              <div className="single-info-box">
+                <div className="info-icon">
+                  <i className="fas fa-phone-alt"></i>
                 </div>
-                <div class="info-area-title">
+                <div className="info-area-title">
                   <h3>Phone Calls</h3>
                   <p>
                     +98 (5784) 123 789 <br /> +88 (3412) 876 346
@@ -36,12 +36,12 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-info-box">
-                <div class="info-icon">
-                  <i class="fas fa-envelope"></i>
+            <div className="col-lg-4 col-md-6">
+              <div className="single-info-box">
+                <div className="info-icon">
+                  <i className="fas fa-envelope"></i>
                 </div>
-                <div class="info-area-title">
+                <div className="info-area-title">
                   <h3>Email Address</h3>
                   <p>
                     support@peddletrds.com <br />{" "}
@@ -54,42 +54,42 @@ export default function Contact() {
       </div>
       {/* Start footer-area */}
 
-      <div class="contact-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="sections-title">
-                <div class="sub-title">
+      <div className="contact-area">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="sections-title">
+                <div className="sub-title">
                   <h3>contacts</h3>
                 </div>
-                <div class="main-title">
+                <div className="main-title">
                   <h1>Write Us Something</h1>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
-              <div class="single-contact-box">
-                <div class="contact-thumb">
+          <div className="row">
+            <div className="col-lg-6 col-md-6">
+              <div className="single-contact-box">
+                <div className="contact-thumb">
                   <img src="assets/images/contact.png" alt="" />
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6">
-              <div class="singles-contacts-box">
-                <div class="contact-title">
+            <div className="col-lg-6 col-md-6">
+              <div className="singles-contacts-box">
+                <div className="contact-title">
                   <h3>get in touch</h3>
                 </div>
                 <form action="#" method="POST" id="dreamit-form">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form_box">
+                  <div className="row">
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form_box">
                         <input type="text" name="name" placeholder="Name" />
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form_box">
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form_box">
                         <input
                           type="text"
                           name="Enter E-mail"
@@ -97,8 +97,8 @@ export default function Contact() {
                         />
                       </div>
                     </div>
-                    <div class="col-lg-12 col-md-12">
-                      <div class="form_box">
+                    <div className="col-lg-12 col-md-12">
+                      <div className="form_box">
                         <input
                           type="text"
                           name="subject"
@@ -106,8 +106,8 @@ export default function Contact() {
                         />
                       </div>
                     </div>
-                    <div class="col-lg-12 col-md-12">
-                      <div class="form_box">
+                    <div className="col-lg-12 col-md-12">
+                      <div className="form_box">
                         <textarea
                           name="massage"
                           id="massage"
@@ -116,7 +116,7 @@ export default function Contact() {
                           placeholder="Massage"
                         ></textarea>
                       </div>
-                      <div class="form-button">
+                      <div className="form-button">
                         <button type="submit">Send Message</button>
                       </div>
                     </div>

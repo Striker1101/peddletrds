@@ -55,22 +55,22 @@ export default function Register() {
     <div>
       <BreadCrumbAuth name={"register"} />
       {/* Start footer-area */}
-      <div class="contact-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
-              <div class="single-contact-box">
-                <div class="contact-thumb">
+      <div className="contact-area">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-6">
+              <div className="single-contact-box">
+                <div className="contact-thumb">
                   <img src="assets/images/contact.png" alt="" />
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6">
-              <div class="singles-contacts-box">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <div class="sections-title">
-                      <div class="footer-logo">
+            <div className="col-lg-6 col-md-6">
+              <div className="singles-contacts-box">
+                <div className="row">
+                  <div className="col-lg-12">
+                    <div className="sections-title">
+                      <div className="footer-logo">
                         <img src="assets/images/logo.png" alt="" />
                       </div>
                     </div>
@@ -82,9 +82,9 @@ export default function Register() {
                   onSubmit={handleSubmit}
                   style={{ marginTop: "2rem" }}
                 >
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form_box">
+                  <div className="row">
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form_box">
                         <input
                           type="text"
                           name="name"
@@ -95,8 +95,8 @@ export default function Register() {
                         />
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form_box">
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form_box">
                         <input
                           type="email"
                           name="email"
@@ -107,8 +107,8 @@ export default function Register() {
                         />
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form_box">
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form_box">
                         <input
                           type="password"
                           name="password"
@@ -119,8 +119,8 @@ export default function Register() {
                         />
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form_box">
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form_box">
                         <input
                           type="password"
                           onChange={handleChange}
@@ -131,8 +131,8 @@ export default function Register() {
                         />
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form_box">
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form_box">
                         <input
                           placeholder="Phone Number"
                           type="text"
@@ -143,8 +143,8 @@ export default function Register() {
                         />
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form_box">
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form_box">
                         <select
                           onChange={handleChange}
                           value={formData.country}
@@ -498,8 +498,8 @@ export default function Register() {
                         </select>
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form_box">
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form_box">
                         <input
                           type="text"
                           name="uplink"
@@ -509,7 +509,7 @@ export default function Register() {
                         />
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div className="col-lg-6 col-md-6">
                       <label>Accept terms</label>
                       <input
                         type="checkbox"
@@ -519,8 +519,8 @@ export default function Register() {
                       />
                     </div>
 
-                    <div class="col-lg-12 col-md-12">
-                      <div class="form-button">
+                    <div className="col-lg-12 col-md-12">
+                      <div className="form-button">
                         <button
                           disabled={loading}
                           style={{
@@ -534,7 +534,7 @@ export default function Register() {
                     </div>
                   </div>
                 </form>
-                <div class="footer-title" style={{ marginTop: "1rem" }}>
+                <div className="footer-title" style={{ marginTop: "1rem" }}>
                   Already have an account?{" "}
                   <Link to={"/login"}>
                     <span>Login</span>

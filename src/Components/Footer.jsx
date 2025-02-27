@@ -4,36 +4,36 @@ export default function Footer() {
   return (
     <>
       {/* Start footer-area */}
-      <div class="footer-area">
-        <div class="container">
-          <div class="row tops">
-            <div class="col-lg-3 col-md-6">
-              <div class="single-footer-box">
-                <div class="footer-logo">
+      <div className="footer-area">
+        <div className="container">
+          <div className="row tops">
+            <div className="col-lg-3 col-md-6">
+              <div className="single-footer-box">
+                <div className="footer-logo">
                   <img src="assets/images/logo.png" alt="" />
                 </div>
-                <div class="footer-content">
-                  <div class="footer-title"></div>
-                  <div class="footer-icon">
+                <div className="footer-content">
+                  <div className="footer-title"></div>
+                  <div className="footer-icon">
                     <ul>
                       <li>
                         <a href="#">
-                          <i class="fab fa-facebook-f"></i>
+                          <i className="fab fa-facebook-f"></i>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fab fa-twitter"></i>
+                          <i className="fab fa-twitter"></i>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fab fa-pinterest"></i>
+                          <i className="fab fa-pinterest"></i>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fab fa-linkedin-in"></i>
+                          <i className="fab fa-linkedin-in"></i>
                         </a>
                       </li>
                     </ul>
@@ -41,13 +41,13 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="single-footer-box">
-                <div class="footer-content">
-                  <div class="footer-title">
+            <div className="col-lg-3 col-md-6">
+              <div className="single-footer-box">
+                <div className="footer-content">
+                  <div className="footer-title">
                     <h2>Categories</h2>
                   </div>
-                  <div class="footer-ico">
+                  <div className="footer-ico">
                     <ul>
                       <li>
                         <a href="#">
@@ -74,13 +74,13 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="single-footer-box">
-                <div class="footer-content">
-                  <div class="footer-title">
+            <div className="col-lg-3 col-md-6">
+              <div className="single-footer-box">
+                <div className="footer-content">
+                  <div className="footer-title">
                     <h2>Useful Links</h2>
                   </div>
-                  <div class="footer-ico">
+                  <div className="footer-ico">
                     <ul>
                       <li>
                         <a href="#">
@@ -102,26 +102,26 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="single-footer-box">
-                <div class="footer-content">
-                  <div class="footer-titles">
+            <div className="col-lg-3 col-md-6">
+              <div className="single-footer-box">
+                <div className="footer-content">
+                  <div className="footer-titles">
                     <h2>Newsletter</h2>
                     <p>
                       Get now free 20% discount for all products on your first
                       order
                     </p>
                   </div>
-                  <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                      <div class="form_box style-two">
+                  <div className="row">
+                    <div className="col-lg-12 col-md-12">
+                      <div className="form_box style-two">
                         <input
                           type="text"
                           name="youe email address"
                           placeholder="Enter E-mail"
                         />
                         <button type="submit">
-                          <i class="far fa-paper-plane"></i>
+                          <i className="far fa-paper-plane"></i>
                         </button>
                       </div>
                     </div>
@@ -130,17 +130,17 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div class="row footer-bottom">
-            <div class="col-lg-6 col-md-6">
-              <div class="copy-left-box">
-                <div class="copy-left-title">
+          <div className="row footer-bottom">
+            <div className="col-lg-6 col-md-6">
+              <div className="copy-left-box">
+                <div className="copy-left-title">
                   <h3>© 2025 Peddles Trades all Rights Reserved.</h3>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6">
-              <div class="copy-right-box">
-                <div class="copy-right-title">
+            <div className="col-lg-6 col-md-6">
+              <div className="copy-right-box">
+                <div className="copy-right-title">
                   <ul>
                     <li>
                       <a href="#">
@@ -161,15 +161,15 @@ export default function Footer() {
       </div>
 
       {/* Start Search Popup Area */}
-      <div class="search-popup">
-        <button class="close-search style-two">
-          <i class="fa fa-times"></i>
+      <div className="search-popup">
+        <button className="close-search style-two">
+          <i className="fa fa-times"></i>
         </button>
-        <button class="close-search">
-          <i class="fas fa-arrow-up"></i>
+        <button className="close-search">
+          <i className="fas fa-arrow-up"></i>
         </button>
         <form method="post" action="#">
-          <div class="form-group">
+          <div className="form-group">
             <input
               type="search"
               name="search-field"
@@ -178,19 +178,19 @@ export default function Footer() {
               required=""
             />
             <button type="submit">
-              <i class="fa fa-search"></i>
+              <i className="fa fa-search"></i>
             </button>
           </div>
         </form>
       </div>
 
       {/* scroll state */}
-      <div class="scroll-area">
-        <div class="top-wrap">
-          <div class="go-top-btn-wraper">
-            <div class="go-top go-top-button">
-              <i class="fa fa-angle-double-up" aria-hidden="true"></i>
-              <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+      <div className="scroll-area">
+        <div className="top-wrap">
+          <div className="go-top-btn-wraper">
+            <div className="go-top go-top-button">
+              <i className="fa fa-angle-double-up" aria-hidden="true"></i>
+              <i className="fa fa-angle-double-up" aria-hidden="true"></i>
             </div>
           </div>
         </div>

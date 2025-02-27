@@ -27,10 +27,10 @@ export default function AdminRouter() {
       return <DepositTransaction />;
 
     case "withdraw":
-      return <WithdrawTransaction />;
+      return <Withdraw />;
 
     case "withdraw_transaction":
-      return <Withdraw />;
+      return <WithdrawTransaction />;
 
     case "trading_bot":
       return <TradingBot />;
