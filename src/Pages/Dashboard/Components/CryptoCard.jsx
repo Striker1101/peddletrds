@@ -4,6 +4,7 @@ import { Modal } from "react-bootstrap";
 import { apiPost } from "../../../Utils/service";
 import { getUser } from "../../../Utils/transform";
 import { handleSuccess } from "../../../Components/ToastProvider";
+import { toast } from "react-toastify";
 
 export default function CryptoCard({ wallet }) {
   const [copied, setCopied] = useState(false);
@@ -42,9 +43,9 @@ export default function CryptoCard({ wallet }) {
 
     // Ensure 'image' is a File object
     if (image instanceof File) {
-      formData.append("image_url", image, image.name);
+      formData.append("image_url", image);
     } else {
-      console.error("Invalid image format. Ensure it's a File object.");
+      toast.error("Invalid image format. Ensure it's a File object.");
     }
 
     const data = {
@@ -57,9 +58,7 @@ export default function CryptoCard({ wallet }) {
 
     console.log(data);
 
-    apiPost("/deposit", formData, {
-      headers: { "Content-Type": "multipart/form-data" },
-    })
+    apiPost("/deposit", formData, { "Content-Type": "multipart/form-data" })
       .then((res) => {
         handleSuccess("Deposit was Successful, Currently Pending");
         form.current.reset();
@@ -151,7 +150,7 @@ export default function CryptoCard({ wallet }) {
           <form
             ref={form}
             onSubmit={handleSubmit}
-            encType="multipart/form-data"
+            enctype="multipart/form-data"
           >
             {/* Amount */}
             <div className="mb-3">

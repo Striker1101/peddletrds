@@ -1,56 +1,62 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, memo } from "react";
 
-export default function Analysis() {
+function Analysis() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const widgetContainer = containerRef.current;
+    // Clear previous widget
+    if (containerRef.current) {
+      containerRef.current.innerHTML = "";
+    }
 
-    if (widgetContainer) {
-      let script = document.createElement("script");
-      script.type = "text/javascript";
-      script.async = true;
+    // Add a delay before appending the script
+    const timeout = setTimeout(() => {
+      const script = document.createElement("script");
       script.src =
         "https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js";
-      script.innerHTML = JSON.stringify({
-        interval: "1m",
-        width: "100%", // Make it responsive
-        height: 450,
-        symbol: "NASDAQ:AAPL",
-        showIntervalTabs: true,
-        displayMode: "single",
-        locale: "en",
-        colorTheme: "dark",
-        isTransparent: false,
-      });
+      script.type = "text/javascript";
+      script.async = true;
+      script.innerHTML = `
+        {
+          "interval": "1m",
+          "width": "100%",
+          "height": 450,
+          "symbol": "NASDAQ:AAPL",
+          "showIntervalTabs": true,
+          "displayMode": "single",
+          "locale": "en",
+          "colorTheme": "dark",
+          "isTransparent": false
+        }`;
 
-      widgetContainer.appendChild(script);
+      containerRef.current?.appendChild(script);
+    }, 500); // Delay of 500ms
 
-      return () => {
-        widgetContainer.innerHTML = ""; // Cleanup on unmount
-      };
-    }
+    return () => clearTimeout(timeout); // Cleanup on unmount
   }, []);
 
   return (
-    <div className="w-full p-4">
+    <div
+      className="tradingview-widget-container"
+      ref={containerRef}
+      style={{ height: "450px", width: "100%" }}
+    >
       <div
-        ref={containerRef}
-        className="tradingview-widget-container w-full"
-        style={{ minHeight: "450px" }}
-      >
-        <div className="tradingview-widget-container__widget"></div>
-        <div className="tradingview-widget-copyright text-center">
-          <a
-            href="https://www.tradingview.com/"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="text-blue-500 hover:text-blue-600"
-          >
-            Track all markets on TradingView
-          </a>
-        </div>
+        className="tradingview-widget-container__widget"
+        style={{ height: "450px", width: "100%" }}
+      ></div>
+      <div className="tradingview-widget-copyright">
+        <a
+          href="https://www.tradingview.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="text-blue-500 hover:text-blue-600"
+        >
+          Track all markets on TradingView
+        </a>
       </div>
     </div>
   );
 }
+
+export default memo(Analysis);

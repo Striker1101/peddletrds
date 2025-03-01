@@ -4,10 +4,9 @@ export default function TradingViewMarketOverview() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Clear previous script to prevent duplication
-    if (containerRef.current) {
-      containerRef.current.innerHTML = "";
-    }
+    if (!containerRef.current) return;
+
+    containerRef.current.innerHTML = ""; // Clear previous script
 
     const script = document.createElement("script");
     script.src =
@@ -20,7 +19,7 @@ export default function TradingViewMarketOverview() {
       showChart: true,
       locale: "en",
       width: "100%",
-      height: "500px", // Explicitly set height
+      height: "500px",
       largeChartUrl: "",
       isTransparent: false,
       showSymbolLogo: true,
@@ -85,7 +84,15 @@ export default function TradingViewMarketOverview() {
       ],
     });
 
-    containerRef.current.appendChild(script);
+    // Add a delay before appending the script
+    const timeout = setTimeout(() => {
+      containerRef.current?.appendChild(script);
+    }, 500);
+
+    return () => {
+      clearTimeout(timeout);
+      containerRef.current && (containerRef.current.innerHTML = ""); // Cleanup script
+    };
   }, []);
 
   return (

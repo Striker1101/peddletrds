@@ -5,6 +5,7 @@ import RoutesPaths from "./RoutesPaths.jsx";
 import { Store } from "./Context/Store.js";
 import useDashboardCheck from "./Components/useDashboardCheck.jsx";
 import { ToastProvider } from "./Components/ToastProvider.jsx";
+import TawkToChat from "./Components/Chat.jsx";
 
 function App() {
   const isDashboard = useDashboardCheck();
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <ToastProvider />
       {isDashboard ? "" : <Navigation />}
+      {isDashboard ? "" : <TawkToChat />}
       <main>
         <Store>
           <RoutesPaths />

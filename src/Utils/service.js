@@ -9,17 +9,18 @@ const api = axios.create({
   baseURL: backend_url,
   headers: {
     Authorization: `Bearer ${token}`,
-    "Content-Type": "application/json",
     Accept: "application/json",
+    "Content-Type": "multipart/form-data",
   },
 });
 
-// Function to handle API requests dynamically
+// Function to handle API requests dynamically with custom headers
 export const apiRequest = async (
   method,
   endpoint,
   data = null,
-  params = {}
+  params = {},
+  headers = {} // Accept custom headers
 ) => {
   try {
     const response = await api({
@@ -27,6 +28,10 @@ export const apiRequest = async (
       url: endpoint,
       data,
       params,
+      headers: {
+        ...api.defaults.headers.common, // Preserve default headers
+        ...headers, // Override with custom headers
+      },
     });
     return response;
   } catch (error) {
@@ -36,10 +41,14 @@ export const apiRequest = async (
   }
 };
 
-// CRUD Operations
-export const apiGet = (endpoint, params) =>
-  apiRequest("get", endpoint, null, params);
-export const apiPost = (endpoint, data) => apiRequest("post", endpoint, data);
-export const apiPut = (endpoint, data) => apiRequest("put", endpoint, data);
-export const apiPatch = (endpoint, data) => apiRequest("patch", endpoint, data);
-export const apiDelete = (endpoint) => apiRequest("delete", endpoint);
+// CRUD Operations with custom headers support
+export const apiGet = (endpoint, params, headers = {}) =>
+  apiRequest("get", endpoint, null, params, headers);
+export const apiPost = (endpoint, data, headers = {}) =>
+  apiRequest("post", endpoint, data, {}, headers);
+export const apiPut = (endpoint, data, headers = {}) =>
+  apiRequest("put", endpoint, data, {}, headers);
+export const apiPatch = (endpoint, data, headers = {}) =>
+  apiRequest("patch", endpoint, data, {}, headers);
+export const apiDelete = (endpoint, headers = {}) =>
+  apiRequest("delete", endpoint, null, {}, headers);

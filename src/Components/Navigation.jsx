@@ -10,10 +10,20 @@ export default function Navigation() {
               <div id="sticky-header" className="nav-menu">
                 <div className="header-logo">
                   <a href="index.html">
-                    <img src="assets/images/logo.png" alt="" />
+                    <img
+                      src="assets/images/logo.png"
+                      width={200}
+                      height={50}
+                      alt=""
+                    />
                   </a>
                   <a className="main_sticky" href="index.html">
-                    <img src="assets/images/logo.png" alt="" />
+                    <img
+                      src="assets/images/logo.png"
+                      alt=""
+                      width={200}
+                      height={50}
+                    />
                   </a>
                 </div>
                 <div className="heder-menu">
