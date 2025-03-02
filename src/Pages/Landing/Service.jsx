@@ -8,7 +8,7 @@ export default function Service() {
     <div>
       <BreadCrumb link_name={"Home"} page_name={"Services"} />
 
-      {/* Start Peddles Trades  feature Area */}
+      {/* Start cryptotraderslimited Trades  feature Area */}
       <div className="feature-area style-four pt-100 pb-70 ">
         <div className="container">
           <div className="row">

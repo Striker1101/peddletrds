@@ -1,82 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Navbar, Nav, Container, Button, Offcanvas } from "react-bootstrap";
+
 export default function Navigation() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
-      <div className="main-header">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div id="sticky-header" className="nav-menu">
-                <div className="header-logo">
-                  <a href="index.html">
-                    <img
-                      src="assets/images/logo.png"
-                      width={200}
-                      height={50}
-                      alt=""
-                    />
-                  </a>
-                  <a className="main_sticky" href="index.html">
-                    <img
-                      src="assets/images/logo.png"
-                      alt=""
-                      width={200}
-                      height={50}
-                    />
-                  </a>
-                </div>
-                <div className="heder-menu">
-                  <ul>
-                    <li>
-                      <Link to={"/"}>Home</Link>
-                    </li>
-                    <li>
-                      <Link to={"/about"}>About</Link>
-                    </li>
-                    <li>
-                      <Link to={"/service"}>Service</Link>
-                    </li>
-                    <li>
-                      <Link to={"/contact"}>Contact</Link>
-                    </li>
-                  </ul>
-                  <div className="menu-button">
-                    <Link to={"/login"}>Join us</Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="mobile-menu-area d-sm-block d-md-block d-lg-none">
-        <div className="mobile-menu" style={{ backgroundColor: "#000616" }}>
-          <nav className="itsoft_menu" style={{ backgroundColor: "#000616" }}>
-            <ul className="nav_scroll" style={{ backgroundColor: "#000616" }}>
-              <li>
-                <Link to={"/"}>Home</Link>
-              </li>
-              <li>
-                <Link to={"/about"}>About</Link>
-              </li>
-              <li>
-                <Link to={"/service"}>Service</Link>
-              </li>
-              <li>
-                <Link to={"/contact"}>Contact</Link>
-              </li>
-              <li>
-                <Link to={"/login"}>Login</Link>
-              </li>
-              <li>
-                <Link to={"/auth/register"}>Sign Up</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+      {/* Desktop Navbar */}
+      <Navbar
+        expand="lg"
+        className="py-3"
+        style={{ backgroundColor: "#212529" }}
+      >
+        <Container>
+          <Navbar.Brand as={Link} to="/">
+            <img
+              src="assets/images/logo.png"
+              alt="logo"
+              style={{ maxWidth: "200px", height: "50px" }}
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            onClick={handleShow}
+          />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link as={Link} to="/" className="text-white p-3">
+                Home
+              </Nav.Link>
+              <Nav.Link as={Link} to="/about" className="text-white p-3">
+                About
+              </Nav.Link>
+              <Nav.Link as={Link} to="/service" className="text-white p-3">
+                Service
+              </Nav.Link>
+              <Nav.Link as={Link} to="/contact" className="text-white p-3">
+                Contact
+              </Nav.Link>
+            </Nav>
+            <Button as={Link} to="/login" variant="light" className="ms-3 p-3">
+              Join us
+            </Button>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </>
   );
 }

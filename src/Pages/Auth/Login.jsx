@@ -61,9 +61,13 @@ export default function Login() {
           <div className="row">
             <div className="col-lg-6 col-md-6">
               <div className="single-contact-box">
-                <div className="contact-thumb">
-                  <img src="assets/images/contact.png" alt="" />
-                </div>
+                <div className="contact-thumb"></div>
+                <img
+                  src="assets/images/contact.png"
+                  alt="contact"
+                  className="img-fluid"
+                  style={{ maxWidth: "250px" }}
+                />
               </div>
             </div>
             <div className="col-lg-6 col-md-6">
@@ -71,9 +75,7 @@ export default function Login() {
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="sections-title">
-                      <div className="footer-logo">
-                        <img src="assets/images/logo.png" alt="" />
-                      </div>
+                      <div className="footer-logo"></div>
                     </div>
                   </div>
                 </div>
@@ -134,162 +136,6 @@ export default function Login() {
                   <Link to={"/register"}>
                     <span>Sign up</span>
                   </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Start footer-area */}
-      <div className="footer-area">
-        <div className="container">
-          <div className="row tops">
-            <div className="col-lg-3 col-md-6">
-              <div className="single-footer-box">
-                <div className="footer-logo">
-                  <img src="assets/images/logo.png" alt="" />
-                </div>
-                <div className="footer-content">
-                  <div className="footer-title"></div>
-                  <div className="footer-icon">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-pinterest"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <div className="single-footer-box">
-                <div className="footer-content">
-                  <div className="footer-title">
-                    <h2>Categories</h2>
-                  </div>
-                  <div className="footer-ico">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <span>What is ICO</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <span>Tokens</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <span>Road Map</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <span>Advisor</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <div className="single-footer-box">
-                <div className="footer-content">
-                  <div className="footer-title">
-                    <h2>Useful Links</h2>
-                  </div>
-                  <div className="footer-ico">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <span>Terms of Services</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <span>My Account</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <span>Return Policy</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <div className="single-footer-box">
-                <div className="footer-content">
-                  <div className="footer-titles">
-                    <h2>Newsletter</h2>
-                    <p>
-                      Get now free 20% discount for all products on your first
-                      order
-                    </p>
-                  </div>
-                  <div className="row">
-                    <div className="col-lg-12 col-md-12">
-                      <div className="form_box style-two">
-                        <input
-                          type="text"
-                          name="your email address"
-                          placeholder="Enter E-mail"
-                        />
-                        <button type="submit">
-                          <i className="far fa-paper-plane"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row footer-bottom">
-            <div className="col-lg-6 col-md-6">
-              <div className="copy-left-box">
-                <div className="copy-left-title">
-                  <h3>©2024 Peddles Trades all Rights Reserved. </h3>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-6">
-              <div className="copy-right-box">
-                <div className="copy-right-title">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <span>Privacy Policy</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span>Terms & Condition</span>
-                      </a>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>

@@ -10,6 +10,7 @@ import TawkToChat from "./Components/Chat.jsx";
 function App() {
   const isDashboard = useDashboardCheck();
 
+  console.log(isDashboard);
   return (
     <div className="App">
       <ToastProvider />

@@ -14,7 +14,10 @@ export default function Home() {
               <div className="single-slider-box">
                 <div className="slider-content">
                   <div className="slider-title">
-                    <h1>Empower Your Trading Journey with Peddles Trades</h1>
+                    <h1>
+                      Empower Your Trading Journey with cryptotraderslimited
+                      Trades
+                    </h1>
                     <p>Where Trust Meets Opportunity.</p>
                   </div>
                 </div>
@@ -533,13 +536,13 @@ export default function Home() {
                   </div>
                   <div className="testimonial-text">
                     <p>
-                      Peddles Trades has been instrumental in helping me
-                      navigate the complexities of the crypto market. Their
-                      personalized support and expert guidance have enabled me
-                      to make informed investment decisions and achieve
-                      impressive returns. I highly recommend their services to
-                      anyone looking to venture into the world of digital
-                      assets.
+                      cryptotraderslimited Trades has been instrumental in
+                      helping me navigate the complexities of the crypto market.
+                      Their personalized support and expert guidance have
+                      enabled me to make informed investment decisions and
+                      achieve impressive returns. I highly recommend their
+                      services to anyone looking to venture into the world of
+                      digital assets.
                     </p>
                   </div>
                   <div className="testimonial-icon">
@@ -574,14 +577,14 @@ export default function Home() {
                   </div>
                   <div className="testimonial-text">
                     <p>
-                      I've been investing with Peddles Trades for over two years
-                      now, and I couldn't be happier with the results. Their
-                      transparent approach, coupled with their innovative
-                      trading tools, has allowed me to grow my portfolio
-                      steadily. The monthly profit payouts are a great bonus and
-                      provide a consistent source of income. I'm grateful to
-                      have found such a reliable partner in my investment
-                      journey.
+                      I've been investing with cryptotraderslimited Trades for
+                      over two years now, and I couldn't be happier with the
+                      results. Their transparent approach, coupled with their
+                      innovative trading tools, has allowed me to grow my
+                      portfolio steadily. The monthly profit payouts are a great
+                      bonus and provide a consistent source of income. I'm
+                      grateful to have found such a reliable partner in my
+                      investment journey.
                     </p>
                   </div>
                   <div className="testimonial-icon">
@@ -617,11 +620,11 @@ export default function Home() {
                   <div className="testimonial-text">
                     <p>
                       As a busy professional, I needed a hands-off investment
-                      solution that I could trust. Peddles Trades's managed
-                      portfolio option has exceeded my expectations. Their team
-                      of expert fund managers has consistently delivered solid
-                      returns while effectively diversifying my investments. I
-                      appreciate their commitment to security and
+                      solution that I could trust. cryptotraderslimited Trades's
+                      managed portfolio option has exceeded my expectations.
+                      Their team of expert fund managers has consistently
+                      delivered solid returns while effectively diversifying my
+                      investments. I appreciate their commitment to security and
                       professionalism.
                     </p>
                   </div>
@@ -657,12 +660,12 @@ export default function Home() {
                   </div>
                   <div className="testimonial-text">
                     <p>
-                      Peddles Trades has truly been a game-changer for me. Their
-                      VIP investor status has given me access to exclusive
-                      opportunities that I wouldn't have had otherwise. The
-                      personalized attention and support I've received have made
-                      me feel valued as a client. I look forward to continuing
-                      my investment journey with them.
+                      cryptotraderslimited Trades has truly been a game-changer
+                      for me. Their VIP investor status has given me access to
+                      exclusive opportunities that I wouldn't have had
+                      otherwise. The personalized attention and support I've
+                      received have made me feel valued as a client. I look
+                      forward to continuing my investment journey with them.
                     </p>
                   </div>
                   <div className="testimonial-icon">
@@ -697,13 +700,13 @@ export default function Home() {
                   </div>
                   <div className="testimonial-text">
                     <p>
-                      I've been impressed with Peddles Trades's commitment to
-                      transparency and integrity. Their regular performance
-                      reports and updates keep me informed about the status of
-                      my investments, giving me peace of mind. The option to
-                      reinvest profits for compounded growth has helped me
-                      accelerate my wealth-building goals. Thank you, Peddles
-                      Trades, for your excellent service.
+                      I've been impressed with cryptotraderslimited Trades's
+                      commitment to transparency and integrity. Their regular
+                      performance reports and updates keep me informed about the
+                      status of my investments, giving me peace of mind. The
+                      option to reinvest profits for compounded growth has
+                      helped me accelerate my wealth-building goals. Thank you,
+                      cryptotraderslimited Trades, for your excellent service.
                     </p>
                   </div>
                   <div className="testimonial-icon">

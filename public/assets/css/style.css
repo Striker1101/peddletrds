@@ -98,7 +98,7 @@ div#sticky-header:hover .sub-menu {
   background-repeat: no-repeat;
   height: 375px;
   position: relative;
-  margin-top: -94px;
+  margin-top: 0px;
 }
 .breacumb-content {
   text-align: center;
@@ -178,7 +178,7 @@ div#sticky-header:hover .sub-menu {
   background-repeat: no-repeat;
   height: 375px;
   position: relative;
-  margin-top: -94px;
+  margin-top: 0px;
 }
 .info-area {
   background: #020415;

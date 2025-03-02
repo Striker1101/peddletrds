@@ -16,10 +16,7 @@ export default function Contact() {
                 </div>
                 <div className="info-area-title">
                   <h3>Address Info</h3>
-                  <p>
-                    Artemis House, 12 Street, Grand Cayman, KY1-1156, Cayman
-                    Islands
-                  </p>
+                  <p>{process.env.REACT_APP_ADDRESS}</p>
                 </div>
               </div>
             </div>
@@ -31,7 +28,8 @@ export default function Contact() {
                 <div className="info-area-title">
                   <h3>Phone Calls</h3>
                   <p>
-                    +98 (5784) 123 789 <br /> +88 (3412) 876 346
+                    {process.env.REACT_APP_PHONE_ONE} <br />{" "}
+                    {process.env.REACT_APP_PHONE_TWO}
                   </p>
                 </div>
               </div>
@@ -44,7 +42,7 @@ export default function Contact() {
                 <div className="info-area-title">
                   <h3>Email Address</h3>
                   <p>
-                    support@peddletrds.com <br />{" "}
+                    {process.env.REACT_APP_EMAIL} <br />{" "}
                   </p>
                 </div>
               </div>

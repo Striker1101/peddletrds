@@ -27,14 +27,17 @@ export default function About() {
                     <h3>about</h3>
                   </div>
                   <div className="main-title">
-                    <h1>We built Peddles Trades to buy & sell shares.</h1>
+                    <h1>
+                      We built crypto traders limited Trades to buy & sell
+                      shares.
+                    </h1>
                   </div>
                   <div className="section-text">
                     <p>
-                      At Peddles Trades, we prioritize the safety and security
-                      of your assets above all else. Through rigorous security
-                      measures and cutting-edge technology, we ensure that your
-                      funds are protected at all times.
+                      At crypto traders limited Trades, we prioritize the safety
+                      and security of your assets above all else. Through
+                      rigorous security measures and cutting-edge technology, we
+                      ensure that your funds are protected at all times.
                     </p>
                   </div>
                 </div>
@@ -129,7 +132,7 @@ export default function About() {
                   <h3>features</h3>
                 </div>
                 <div className="main-title">
-                  <h1>Peddles Trades Best Features</h1>
+                  <h1>crypto traders limited Trades Best Features</h1>
                 </div>
                 <div className="section-text">
                   <p>
@@ -188,14 +191,14 @@ export default function About() {
                     <h3>skills</h3>
                   </div>
                   <div className="main-title">
-                    <h1>Peddles Trades Expertise</h1>
+                    <h1>crypto traders limited Trades Expertise</h1>
                   </div>
                   <div className="section-text">
                     <p>
-                      "At Peddles Trades, we're your trusted partner in the
-                      crypto world. With transparency, security, and
-                      personalized support, we're here to help you navigate and
-                      succeed in the ever-changing crypto landscape. Our
+                      "At crypto traders limited Trades, we're your trusted
+                      partner in the crypto world. With transparency, security,
+                      and personalized support, we're here to help you navigate
+                      and succeed in the ever-changing crypto landscape. Our
                       priority is the safety of your assets, backed by rigorous
                       security measures and cutting-edge technology. Join us to
                       unlock the potential of digital assets and take control of
