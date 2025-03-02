@@ -113,6 +113,7 @@ export default function ProfilePage() {
                   <Form.Control
                     type={field === "email" ? "email" : "text"}
                     name={field}
+                    readOnly={field === "email" ? true : false}
                     value={user[field]}
                     onChange={handleChange}
                     className="py-2"

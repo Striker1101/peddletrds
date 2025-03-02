@@ -61,7 +61,12 @@ export default function Register() {
             <div className="col-lg-6 col-md-6">
               <div className="single-contact-box">
                 <div className="contact-thumb">
-                  <img src="assets/images/contact.png" alt="" />
+                  <img
+                    src="assets/images/contact.png"
+                    className="img-fluid"
+                    style={{ maxWidth: "250px" }}
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -70,9 +75,7 @@ export default function Register() {
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="sections-title">
-                      <div className="footer-logo">
-                        <img src="assets/images/logo.png" alt="" />
-                      </div>
+                      <div className="footer-logo"></div>
                     </div>
                   </div>
                 </div>
