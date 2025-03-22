@@ -47,7 +47,11 @@ export default function ForgetPassword() {
             <div className="col-lg-6 col-md-6">
               <div className="single-contact-box">
                 <div className="contact-thumb">
-                  <img src="assets/images/contact.png" alt="" />
+                  <img
+                    src="assets/images/contact.png"
+                    alt=""
+                    className="w-full"
+                  />
                 </div>
               </div>
             </div>
@@ -57,7 +61,13 @@ export default function ForgetPassword() {
                   <div className="col-lg-12">
                     <div className="sections-title">
                       <div className="footer-logo">
-                        <img src="assets/images/logo.png" alt="" />
+                        <img
+                          src="assets/images/logo.png"
+                          alt=""
+                          style={{
+                            width: "100%",
+                          }}
+                        />
                       </div>
                     </div>
                   </div>
