@@ -22,7 +22,7 @@ export default function ForgetPassword() {
     e.preventDefault();
     setLoading(true);
 
-    apiPost("/auth/password/email", formData)
+    apiPost("/auth/send_token", formData)
       .then((response) => {
         setLoading(false);
 

@@ -6,6 +6,7 @@ import { Store } from "./Context/Store.js";
 import useDashboardCheck from "./Components/useDashboardCheck.jsx";
 import { ToastProvider } from "./Components/ToastProvider.jsx";
 import TawkToChat from "./Components/Chat.jsx";
+import Testimony from "./Components/Testimony.jsx";
 
 function App() {
   const isDashboard = useDashboardCheck();
@@ -22,6 +23,8 @@ function App() {
         </Store>
       </main>
       {isDashboard ? "" : <Footer />}
+
+      <Testimony />
     </div>
   );
 }
