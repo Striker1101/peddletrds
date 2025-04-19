@@ -22,14 +22,16 @@ export default function ForgetPassword() {
     e.preventDefault();
     setLoading(true);
 
-    apiPost("/auth/send_token", formData)
+    apiPost("/auth/password/email", formData)
       .then((response) => {
         setLoading(false);
 
         if (response.status === 200) {
           handleSuccess(response.data.message);
+          // setTimeout(() => {
+          //   window.location.href = `/confirm_password?email=${formData.email}`;
+          // }, 1000);
         }
-        console.log("response", response);
       })
       .catch((err) => {
         setLoading(false);
@@ -108,7 +110,7 @@ export default function ForgetPassword() {
                 </form>
                 <div className="footer-title" style={{ marginTop: "1rem" }}>
                   Don't have an account?{" "}
-                  <a href="signup.php">
+                  <a href="/register">
                     <span>Sign up</span>
                   </a>
                 </div>

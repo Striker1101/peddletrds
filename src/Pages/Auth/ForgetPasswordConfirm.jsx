@@ -8,6 +8,7 @@ export default function ForgetPasswordConfirm() {
   const [formData, setFormData] = useState({
     password: "",
     password_confirmation: "",
+    token: "",
   });
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -35,19 +36,19 @@ export default function ForgetPasswordConfirm() {
     setLoading(true);
 
     const data = {
-      ...formData,
-      token,
+      password: formData.password,
+      token: formData.token || token,
+      password_confirmation: formData.password,
       email,
     };
 
-    if (!token || !email) {
+    if (!token && !formData.token) {
       window.location.href = "/forget_password";
     }
 
     apiPost("/auth/password/reset", data)
       .then((response) => {
         setLoading(false);
-
         if (response.status === 200) {
           handleSuccess(response.data.message);
           setTimeout(() => {
@@ -103,6 +104,16 @@ export default function ForgetPasswordConfirm() {
                   <div className="row">
                     <div className="col-lg-12 col-md-12">
                       <div className="form_box">
+                        {/* <input
+                          type="text"
+                          defaultValue={formData.token}
+                          onChange={handleChange}
+                          name="token"
+                          style={{ marginBottom: "5px" }}
+                          required
+                          placeholder="Token"
+                        /> */}
+
                         <input
                           type="password"
                           defaultValue={formData.password}
@@ -141,7 +152,7 @@ export default function ForgetPasswordConfirm() {
                 </form>
                 <div className="footer-title" style={{ marginTop: "1rem" }}>
                   Don't have an account?{" "}
-                  <a href="signup.php">
+                  <a href="/register">
                     <span>Sign up</span>
                   </a>
                 </div>
