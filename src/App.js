@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <ToastProvider />
       {isDashboard ? "" : <Navigation />}
-      {isDashboard ? "" : <TawkToChat />}
+      {/* {isDashboard ? "" : <TawkToChat />} */}
       <main>
         <Store>
           <RoutesPaths />
